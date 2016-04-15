@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BlankApp</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="name_s">Name(s)</string>
+    <string name="intro">intro</string>
+</resources>
