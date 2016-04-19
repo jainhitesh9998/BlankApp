@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hiteshjain.blankapp">
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+
 
     <application
         android:allowBackup="true"
@@ -56,7 +58,9 @@
         <activity
             android:name=".Camera"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            >
 
         </activity>
 
