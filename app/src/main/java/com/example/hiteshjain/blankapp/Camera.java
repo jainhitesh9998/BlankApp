@@ -2,6 +2,7 @@ package com.example.hiteshjain.blankapp;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
@@ -20,6 +21,7 @@ public class Camera extends Activity implements View.OnClickListener {
     Button b;
     ImageView iv;
     Intent i;
+    Bitmap bmp;
     final static int cameraData = 0;
 
 
@@ -57,5 +59,11 @@ public class Camera extends Activity implements View.OnClickListener {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == RESULT_OK) {
+            Bundle extra = data.getExtras();
+            bmp = (Bitmap) extra.get("data");
+            iv.setImageBitmap(bmp);
+
+        }
     }
 }
